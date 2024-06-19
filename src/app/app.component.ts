@@ -26,7 +26,7 @@ export class AppComponent {
     }
 
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?t=${this.title}&apikey=${this.apiKey}`);
+      const response = await axios.get(`https://www.omdbapi.com/?t=${this.title}&apikey=${this.apiKey}`);
       if (response.data.Response === 'False') {
         this.error = response.data.Error;
       } else {
