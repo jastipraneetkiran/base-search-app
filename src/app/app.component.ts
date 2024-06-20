@@ -21,7 +21,7 @@ export class AppComponent {
 
   async search() {
     if (this.title.trim() === '') {
-      this.error = 'Title is required';
+      this.error = 'Movie/Series Title is required';
       return;
     }
 
