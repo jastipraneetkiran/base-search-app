@@ -3,8 +3,8 @@
     <div class="flex-item">
     <div class="container">
         <h1>Search for Movies/Series</h1>
-        <input type="text" [(ngModel)]="title" placeholder="Enter movie/series name" id="search-box" >
-        <button (click)="search()">Search</button>
+        <input type="text" [(ngModel)]="title" placeholder="Enter movie/series name" id="search-box" (keyup.enter)="onEnter()" >
+        <div><button (click)="search()" [disabled]="loader"> <i *ngIf="loader" class="fa fa-refresh fa-spin "></i>Search</button></div>
         <div *ngIf="error" class="sg-error-message">{{ error }}</div>
     </div>
   </div>
