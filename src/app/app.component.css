@@ -1,6 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -42,5 +41,34 @@ button:hover {
 @media (max-width: 600px) {
   input[type="text"] {
       width: 100%;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+.sg-error-message
+{	background: #FFC199;
+	border-left: 9px solid #FF6600;
+	color: firebrick;
+  font-size: 20px;
+  margin:10px 0;
+}
+
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-item iframe {
+    height: 50vh;
   }
 }
